@@ -13,9 +13,9 @@ I build LLM agents, executable task environments and automated evaluation for to
 The point is the workflow, not a fixed question set: a repeatable path from *task design* → *verification* → *grading* → *failure analysis*.
 
 - **Task spec**: each task is a directory holding an instruction, a declarative verifier, a reference trajectory and negative examples. Any agent plugs in through a standard trajectory format
-- **Verifiers from reusable checks**: trajectory matching, argument constraints, numeric tolerance and coverage/consistency. Answers must name an actually generated candidate, so matching a keyword isn't enough. Results are reported as multi-dimensional scores plus pass@k / pass^k
-- **Grading that can be trusted**: missing evidence fails the task instead of being skipped. Every result is bound to the agent that produced it, so scores can't be inherited across agents. Confidence intervals count tasks, not repeated trials. Self-validation: references must pass; empty, truncated, evidence-stripped and known-wrong trajectories must fail
-- **Hardened through external review**: fixed the loopholes a reviewer found (refusals counted as recommendations, passing without evidence, inherited scores, inflated intervals). Each one is now a regression test (55 tests)
+- **Verifiers from reusable checks**: trajectory matching, argument constraints, numeric tolerance and coverage/consistency. Every recommended molecule must come from the generated set; mentioning a generated molecule or matching a keyword isn't enough. Results are reported as multi-dimensional scores plus pass@k / pass^k
+- **Grading that can be trusted**: missing or `null` evidence fails the task instead of being skipped. Every result is bound to the agent that produced it and to the task version it was graded against, so scores can't be inherited across agents or carried over after a task changes. Confidence intervals count tasks, not repeated trials. Self-validation: references must pass; empty, truncated, evidence-stripped, `null`-filled and known-wrong trajectories must fail
+- **Hardened through external review**: fixed the loopholes a reviewer found: deferrals or off-list molecules counted as recommendations, passing without evidence or with `null` evidence, inherited scores, stale task versions on resume, inflated intervals. Each one is now a regression test (68 tests)
 
 ### EM-Agent: LLM agent for molecular design · Creator & main developer
 
