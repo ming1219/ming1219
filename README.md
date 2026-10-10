@@ -16,7 +16,7 @@ Found: multi-agent raised candidate completion **40% → 94%** on multi-objectiv
 
 | Project | What it is |
 | ------- | ---------- |
-| [**EMBench**](https://github.com/ming1219/EMBench) `MIT` | Evaluation framework for tool-using agents: task-as-directory spec, reusable declarative checks, self-validating verifiers, pass@k / pass^k, offline re-grading |
+| [**EMBench**](https://github.com/ming1219/EMBench) `MIT` | Evaluation framework for tool-using agents: task-as-directory spec, reusable declarative checks, self-validating verifiers, evidence-strict grading, results bound to the agent that produced them, task-level pass@k / pass^k, offline re-grading |
 | **EM-Agent** `private` | Molecular-design agent: LangGraph single- and multi-agent workflows, MCP tool server (29 tools), FastAPI + SSE backend, React + TypeScript frontend, trajectory-level evaluation, deployed on Linux with nginx and systemd |
 
 ### 🧰 Stack
