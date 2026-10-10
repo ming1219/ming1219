@@ -12,8 +12,6 @@ Found: multi-agent raised candidate completion **40% → 94%** on multi-objectiv
 
 [My Resume (English)](https://github.com/ming1219/ming1219/blob/main/RESUME.md) | [我的简历（中文）](https://github.com/ming1219/ming1219/blob/main/RESUME.zh-CN.md)
 
-> 简历只列了能用代码、提交记录和评测数据证明的部分。做 Agent 的很多经验，比如怎么定义「任务成功」、怎么让评测本身不出错、怎么从失败轨迹里找根因，在简历上不容易体现，期望有所交流
-
 ### 🛠 Projects
 
 | Project | What it is |
