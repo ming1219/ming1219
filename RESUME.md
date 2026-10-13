@@ -11,14 +11,15 @@ I also work on molecular AI: de novo molecular design with reinforcement learnin
 ## Experience
 
 - **2024 – 2026**　Joint-training graduate student, Research Institute
+  - Designed and built the molecular-design agent [EM-Agent](https://github.com/ming1219/EM-Agent) (see Projects), now deployed online
 - **Current**　M.S. student (3rd year), Southwest University of Science and Technology
 
 ## Publications
 
 - **De Novo Design of Energetic Molecules via Domain-Guided Reinforcement Learning and Unified 3D Representation**
-  *Information Sciences*　first author　[code](https://github.com/ming1219/EMDP)
+  *Information Sciences*　published　first author　[code](https://github.com/ming1219/EMDP)
 - **U3R-EMPP: Unified 3D Representations via Pre-trained Models for Energetic Molecule Property Prediction**
-  CSCWD 2026　first author (CCF-C)　[code](https://github.com/ming1219/U3R-EMPP)
+  CSCWD 2026　published　first author (CCF-C)　[code](https://github.com/ming1219/U3R-EMPP)
 
 ## Projects
 
@@ -62,6 +63,7 @@ A repeatable workflow: *task design* → *verification* → *grading* → *failu
 
 ## Honors
 
+- Silver Medal, 2023 ACM Programming Contest, Sichuan Province
 - Outstanding Graduate of Sichuan Province (class of 2023)
 - University First-Class Scholarship
 - Graduate Academic Scholarship (third class)

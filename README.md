@@ -1,6 +1,6 @@
 ## `cat` `ming1219_info`
 
-**Wen Jian (文健)** · M.S. student @ [Southwest University of Science and Technology](https://www.swust.edu.cn/) `3rd year` · joint training @ a research institute `2024 – 2026`
+**Wen Jian (文健)** · M.S. student @ [Southwest University of Science and Technology](https://www.swust.edu.cn/) `3rd year` · joint training @ a research institute `2024 – 2026` (built EM-Agent)
 
 I build LLM agents, executable task environments and evaluation frameworks for tool-using models
 
@@ -12,7 +12,7 @@ Found: multi-agent raised candidate completion **40% → 94%** on multi-objectiv
 
 Shipped: **security task environments from real CVEs** — reviving patched CVEs on official Docker images with minimal reverse patches, driving an LLM creator with injection recipes, and gating every task with program-run proofs: untouched target fails, reference solution solves, wrong submissions fail, re-grading agrees
 
-Published (first author): **De Novo Design of Energetic Molecules via Domain-Guided Reinforcement Learning and Unified 3D Representation** (*Information Sciences*); **U3R-EMPP** (CSCWD 2026)
+Published, first author: **De Novo Design of Energetic Molecules via Domain-Guided Reinforcement Learning and Unified 3D Representation** (*Information Sciences*); **U3R-EMPP** (CSCWD 2026)
 
 [My Resume (English)](https://github.com/ming1219/ming1219/blob/main/RESUME.md) | [我的简历（中文）](https://github.com/ming1219/ming1219/blob/main/RESUME.zh-CN.md)
 

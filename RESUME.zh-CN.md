@@ -11,14 +11,15 @@
 ## 经历
 
 - **2024 – 2026**　联合培养研究生，研究院
+  - 设计并开发分子设计智能体 [EM-Agent](https://github.com/ming1219/EM-Agent)（见下方项目），已部署上线
 - **在读**　硕士研究生（三年级），西南科技大学
 
 ## 论文
 
 - **De Novo Design of Energetic Molecules via Domain-Guided Reinforcement Learning and Unified 3D Representation**
-  *Information Sciences*　第一作者（新锐一区 TOP，中科院二区）　[代码](https://github.com/ming1219/EMDP)
+  *Information Sciences*　已发表　第一作者（新锐一区 TOP，中科院二区）　[代码](https://github.com/ming1219/EMDP)
 - **U3R-EMPP: Unified 3D Representations via Pre-trained Models for Energetic Molecule Property Prediction**
-  CSCWD 2026　第一作者（CCF-C）　[代码](https://github.com/ming1219/U3R-EMPP)
+  CSCWD 2026　已发表　第一作者（CCF-C）　[代码](https://github.com/ming1219/U3R-EMPP)
 
 ## 项目
 
@@ -62,6 +63,7 @@
 
 ## 荣誉
 
+- 2023 年 ACM 程序设计竞赛四川省赛银牌
 - 2023 届四川省优秀大学毕业生
 - 校级一等奖学金
 - 研究生学业三等奖学金
