@@ -4,7 +4,7 @@
 
 我是西南科技大学的硕士三年级学生，2024 – 2026 年在研究院联合培养。我的工作集中在**大模型智能体**、**可执行任务环境**和**自动化评测**：搭建能调用领域工具完成任务的 agent，把任务做成能由程序验证的环境。
 
-我也做分子 AI：用强化学习做分子从头设计，微调预训练的 3D 分子模型做性质预测。
+我也做分子 AI：用强化学习做分子从头设计，微调预训练的 3D 分子模型做性质预测，相关工作以第一作者发表于 *Information Sciences* 和 CSCWD 2026。
 
 [GitHub](https://github.com/ming1219) · [EM-Agent 在线访问](https://em.dkelab.cn/)
 
@@ -12,6 +12,13 @@
 
 - **2024 – 2026**　联合培养研究生，研究院
 - **在读**　硕士研究生（三年级），西南科技大学
+
+## 论文
+
+- **De Novo Design of Energetic Molecules via Domain-Guided Reinforcement Learning and Unified 3D Representation**
+  *Information Sciences*　第一作者（新锐一区 TOP，中科院二区）　[代码](https://github.com/ming1219/EMDP)
+- **U3R-EMPP: Unified 3D Representations via Pre-trained Models for Energetic Molecule Property Prediction**
+  CSCWD 2026　第一作者（CCF-C）　[代码](https://github.com/ming1219/U3R-EMPP)
 
 ## 项目
 
@@ -22,6 +29,15 @@
 - **审核**：未作修改的目标必须失败、参考解必须能解出、错误提交必须失败、重复判分结果一致；另有三层泄露扫描
 - **判分**：flag 逐字节比对、按配方定义的部分得分，既可作为评测的成功判定，也可作为强化学习的奖励
 - **难度标定**：用模型 3 × 2 小时的试做并阅读轨迹来标定难度；把 10 多类容器环境故障沉淀为构建规则
+
+### QA Studio：大模型训练数据生成平台 · [在线访问](https://qa.dkelab.cn)
+
+在企业指导下构建 CoT 问答数据集：设计并实现多阶段数据生成系统，接入大模型，累计产出 10 万+ 条高质量问答数据。
+
+- **六阶段可视化流水线**：预处理 → 生成 → 校验 → 评估 → 过滤 → 导出，把原始语料转化为高质量 QA 训练集
+- **流水线引擎**：支持断点续跑、任意阶段重跑；自建全局线程池与公平限流，把 6 个阶段的 LLM 调用改为分批并发，解决多用户同时提交的问题
+- **质量控制**：专业 CoT 构建、多层质检门控、按题型重试的闭环
+- **可追溯**：配置中心 + 提示词版本管理 + 快照追溯
 
 ### EMBench：工具调用智能体评测框架 · 作者 · [GitHub](https://github.com/ming1219/EMBench)
 
@@ -41,9 +57,19 @@
 
 ### 分子 AI 模型：生成与性质预测
 
-- **EMDP** · [GitHub](https://github.com/ming1219/EMDP)：分子从头设计。先在领域分子上对 REINVENT 预训练模型做迁移学习，再做分阶段强化学习，奖励由领域知识构成（子结构计数、几何平均聚合、骨架多样性过滤）；采样 5000 个分子，用微调的 Uni-Mol v2（1.64 亿参数）多任务模型预测 8 项性质，再按能量、稳定性（BDE）、可合成性（SA、SYBA）做帕累托筛选，得到 24 个候选
-- **U3R-EMPP** · [GitHub](https://github.com/ming1219/U3R-EMPP)：性质预测。微调预训练的 3D 分子表示模型（Uni-Mol），同时预测 7 项性质；数据集整合自三个已发表的数据来源（3DCNN、MDGNN、q-RASPR）；按分子骨架划分做 10 折交叉验证
+- **EMDP** · [GitHub](https://github.com/ming1219/EMDP) · 论文 *Information Sciences*：分子从头设计。先在领域分子上对 REINVENT 预训练模型做迁移学习，再做分阶段强化学习，奖励由领域知识构成（子结构计数、几何平均聚合、骨架多样性过滤）；采样 5000 个分子，用微调的 Uni-Mol v2（1.64 亿参数）多任务模型预测 8 项性质，再按能量、稳定性（BDE）、可合成性（SA、SYBA）做帕累托筛选，得到 24 个候选
+- **U3R-EMPP** · [GitHub](https://github.com/ming1219/U3R-EMPP) · 论文 CSCWD 2026：性质预测。微调预训练的 3D 分子表示模型（Uni-Mol），同时预测 7 项性质；数据集整合自三个已发表的数据来源（3DCNN、MDGNN、q-RASPR）；按分子骨架划分做 10 折交叉验证
+
+## 荣誉
+
+- 2023 届四川省优秀大学毕业生
+- 校级一等奖学金
+- 研究生学业三等奖学金
 
 ## 技能
 
 Python、TypeScript、Bash · LangGraph、MCP、FastAPI · Docker、Harbor · CVE 复现、补丁比对 · Uni-Mol、REINVENT、RDKit · Linux、nginx、systemd、Git · 使用 AI 编程助手并通过测试验证结果
+
+## 爱好
+
+ACM 程序设计竞赛

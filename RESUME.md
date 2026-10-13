@@ -2,9 +2,9 @@
 
 # Wen Jian
 
-I am a third-year M.S. student at Southwest University of Science and Technology, and from 2024 to 2026 I was in a joint training program with a research institute. I work on **LLM agents**, **executable task environments** and **automated evaluation**: building agents that get real work done with domain tools, turning tasks into environments a program can verify, and making sure the grading itself can't be gamed.
+I am a third-year M.S. student at Southwest University of Science and Technology, and from 2024 to 2026 I was in a joint training program with a research institute. I work on **LLM agents**, **executable task environments** and **automated evaluation**: building agents that get real work done with domain tools, and turning tasks into environments a program can verify.
 
-I also work on molecular AI: de novo molecular design with reinforcement learning, and property prediction by fine-tuning pre-trained 3D molecular models.
+I also work on molecular AI: de novo molecular design with reinforcement learning, and property prediction by fine-tuning pre-trained 3D molecular models, published as first author in *Information Sciences* and at CSCWD 2026.
 
 [GitHub](https://github.com/ming1219) · [EM-Agent (live)](https://em.dkelab.cn/)
 
@@ -12,6 +12,13 @@ I also work on molecular AI: de novo molecular design with reinforcement learnin
 
 - **2024 – 2026**　Joint-training graduate student, Research Institute
 - **Current**　M.S. student (3rd year), Southwest University of Science and Technology
+
+## Publications
+
+- **De Novo Design of Energetic Molecules via Domain-Guided Reinforcement Learning and Unified 3D Representation**
+  *Information Sciences*　first author　[code](https://github.com/ming1219/EMDP)
+- **U3R-EMPP: Unified 3D Representations via Pre-trained Models for Energetic Molecule Property Prediction**
+  CSCWD 2026　first author (CCF-C)　[code](https://github.com/ming1219/U3R-EMPP)
 
 ## Projects
 
@@ -22,6 +29,15 @@ I also work on molecular AI: de novo molecular design with reinforcement learnin
 - **Review gates**: the untouched target fails, the reference solution solves, wrong submissions fail, re-grading agrees; plus three-layer leak scanning
 - **Grading**: byte-compared flags and recipe-defined partial scores, usable both as an evaluation success criterion and as an RL reward
 - **Difficulty calibration**: difficulty calibrated by 3 × 2-hour model attempts with trajectory reading; 10+ classes of container environment failures turned into build rules
+
+### QA Studio: training-data generation platform for LLMs · [Live](https://qa.dkelab.cn)
+
+Built a chain-of-thought (CoT) QA dataset under industry guidance: designed and implemented a multi-stage data generation system connected to LLMs, producing 100k+ high-quality QA pairs.
+
+- **Six-stage visual pipeline**: preprocessing → generation → validation → evaluation → filtering → export, turning raw corpora into high-quality QA training sets
+- **Pipeline engine**: resumable runs and re-running any stage; a global thread pool with fair rate limiting turns the LLM calls of all 6 stages into batched concurrent requests, fixing submissions under multiple users
+- **Quality control**: domain-specific CoT construction, multi-layer quality gates, and a per-question-type retry loop
+- **Traceability**: configuration center, prompt versioning and snapshot tracing
 
 ### EMBench: evaluation framework for tool-using agents · Author · [GitHub](https://github.com/ming1219/EMBench)
 
@@ -41,9 +57,19 @@ A repeatable workflow: *task design* → *verification* → *grading* → *failu
 
 ### Molecular AI models: generation and property prediction
 
-- **EMDP** · [GitHub](https://github.com/ming1219/EMDP): de novo molecular design. Transfer learning of a REINVENT prior on domain molecules, then staged reinforcement learning with domain-knowledge scoring (substructure counts, geometric-mean aggregation, scaffold diversity filter). 5,000 sampled molecules are scored by a fine-tuned Uni-Mol v2 (164M) multi-task model on 8 properties, then Pareto-screened across energy, stability (BDE) and synthesizability (SA, SYBA) down to 24 candidates
-- **U3R-EMPP** · [GitHub](https://github.com/ming1219/U3R-EMPP): property prediction by fine-tuning a pre-trained 3D molecular representation model (Uni-Mol) on 7 properties at once; datasets merged from three published sources (3DCNN, MDGNN, q-RASPR); 10-fold scaffold-split cross-validation
+- **EMDP** · [GitHub](https://github.com/ming1219/EMDP) · paper in *Information Sciences*: de novo molecular design. Transfer learning of a REINVENT prior on domain molecules, then staged reinforcement learning with domain-knowledge scoring (substructure counts, geometric-mean aggregation, scaffold diversity filter). 5,000 sampled molecules are scored by a fine-tuned Uni-Mol v2 (164M) multi-task model on 8 properties, then Pareto-screened across energy, stability (BDE) and synthesizability (SA, SYBA) down to 24 candidates
+- **U3R-EMPP** · [GitHub](https://github.com/ming1219/U3R-EMPP) · paper at CSCWD 2026: property prediction by fine-tuning a pre-trained 3D molecular representation model (Uni-Mol) on 7 properties at once; datasets merged from three published sources (3DCNN, MDGNN, q-RASPR); 10-fold scaffold-split cross-validation
+
+## Honors
+
+- Outstanding Graduate of Sichuan Province (class of 2023)
+- University First-Class Scholarship
+- Graduate Academic Scholarship (third class)
 
 ## Skills
 
 Python, TypeScript, Bash · LangGraph, MCP, FastAPI · Docker, Harbor · CVE reproduction, patch diffing · Uni-Mol, REINVENT, RDKit · Linux, nginx, systemd, Git · AI coding assistants, with results verified by tests
+
+## Interests
+
+ACM-ICPC-style competitive programming
