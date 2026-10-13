@@ -1,24 +1,31 @@
 **English** | [简体中文](RESUME.zh-CN.md) · [← Profile](https://github.com/ming1219)
 
-# Resume · ming1219
+# Wen Jian
 
-**M.S. student (3rd year), Southwest University of Science and Technology**
+I am a third-year M.S. student at Southwest University of Science and Technology, and from 2024 to 2026 I was in a joint training program with a research institute. I work on **LLM agents**, **executable task environments** and **automated evaluation**: building agents that get real work done with domain tools, turning tasks into environments a program can verify, and making sure the grading itself can't be gamed.
 
-I build LLM agents, executable task environments and automated evaluation for tool-using models.
+I also work on molecular AI: de novo molecular design with reinforcement learning, and property prediction by fine-tuning pre-trained 3D molecular models.
+
+[GitHub](https://github.com/ming1219) · [EM-Agent (live)](https://em.dkelab.cn/)
+
+## Experience
+
+- **2024 – 2026**　Joint-training graduate student, Research Institute
+- **Current**　M.S. student (3rd year), Southwest University of Science and Technology
 
 ## Projects
 
-### Security Task Factory: CVE-based task environments for LLM evaluation and RL · `private`
+### Security Task Factory: CVE-based task environments for LLM evaluation and RL
 
 - **Reviving real CVEs**: diff the vulnerable and fixed source, then strip the patch's defenses with a minimal reverse patch on the official Docker image
-- **Recipe-driven LLM creator**: injection recipes drive an LLM that emits environment build scripts, task statements and private reference solutions
-- **Four automated gates**: the untouched target fails, the reference solution solves, wrong submissions fail, re-grading agrees; plus three-layer leak scanning
-- **Outcome-only grading**: byte-compared flags and recipe-defined partial scores, usable both as an evaluation success criterion and as an RL reward
-- **Calibration and reliability**: difficulty calibrated by 3 × 2-hour model attempts with trajectory reading; 10+ classes of container environment failures turned into build rules
+- **LLM task creation**: injection recipes drive an LLM that emits environment build scripts, task statements and private reference solutions
+- **Review gates**: the untouched target fails, the reference solution solves, wrong submissions fail, re-grading agrees; plus three-layer leak scanning
+- **Grading**: byte-compared flags and recipe-defined partial scores, usable both as an evaluation success criterion and as an RL reward
+- **Difficulty calibration**: difficulty calibrated by 3 × 2-hour model attempts with trajectory reading; 10+ classes of container environment failures turned into build rules
 
 ### EMBench: evaluation framework for tool-using agents · Author · [GitHub](https://github.com/ming1219/EMBench)
 
-The point is the workflow, not a fixed question set: a repeatable path from *task design* → *verification* → *grading* → *failure analysis*.
+A repeatable workflow: *task design* → *verification* → *grading* → *failure analysis*.
 
 - **Task spec**: each task is a directory holding an instruction, a declarative verifier, a reference trajectory and negative examples. Any agent plugs in through a standard trajectory format
 - **Verifiers from reusable checks**: trajectory matching, argument constraints, numeric tolerance and coverage/consistency. Every recommended molecule must come from the generated set; mentioning a generated molecule or matching a keyword isn't enough. Results are reported as multi-dimensional scores plus pass@k / pass^k
