@@ -28,11 +28,12 @@ I also work on molecular AI, publishing as first author in *Information Sciences
 
 ### Security Task Factory · an LLM evaluation set built from real CVEs
 
-Turns real, already-patched vulnerabilities into standardized tasks whose completion a program can judge. Every task has a reproducible environment, a single solution and calibrated difficulty, so it can be used to evaluate LLMs and also as an environment and reward source for reinforcement learning.
+Rebuilds real, already-patched vulnerabilities as standardized tasks, and a program decides whether each task is solved. Every task has a reproducible environment, exactly one solution and calibrated difficulty. The set can be used to evaluate LLMs and also as training environments and reward signals for reinforcement learning.
 
-- **Building tasks**　Each CVE is revived on the official Docker image with a minimal reverse patch, using one of three injection methods chosen by how the software is shipped, namely removing the fix, activating a configuration or using a native defect. Hand-written injection recipes state the vulnerability mechanism, the build approach and the single solution. A sandboxed LLM then generates the complete task package in one pass, including environment orchestration scripts, a two-layer task statement and a private reference solution, and also exports it in a general evaluation format compatible with terminal-bench
-- **Proving tasks work**　The framework verifies every LLM-generated task by building the real image and running the reference solution to success. An independent model then reviews each task on four criteria, namely solvability, cheating resistance, shortcut resistance and whether it can be solved without blind guessing
-- **Calibrating difficulty**　The models under test solve the tasks in the same environments, and difficulty is set by pass rate. Trajectory analysis confirms that failures are genuine and rules out failures caused by the environment
+- **Reviving the vulnerability**　Starting from the official Docker image, a minimal reverse patch brings a fixed CVE back. Depending on how the software is shipped, one of three injection methods is used, namely removing the fix, enabling a vulnerable configuration or exposing a native defect
+- **Generating the task**　An injection recipe is first written by hand for each vulnerability, stating its mechanism, how to build it and the single solution. A sandboxed LLM then generates the full task package in one pass, with environment orchestration scripts, a two-layer task statement and a private reference solution. The package is also exported in a general evaluation format compatible with terminal-bench
+- **Proving it works**　Every generated task must run its reference solution successfully on an image built for real. An independent model then checks four things, namely that the task is solvable, resists cheating, has no shortcut and can be solved without blind guessing
+- **Calibrating difficulty**　The models under test solve the tasks in the same environments, and difficulty is set by their pass rate. Reading the trajectories then confirms that each failure is a genuine one and not caused by an environment fault
 
 ### EMBench: evaluation framework for tool-using agents · Author · [GitHub](https://github.com/ming1219/EMBench)
 
