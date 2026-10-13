@@ -10,6 +10,8 @@ Open-sourced: [**EMBench**](https://github.com/ming1219/EMBench), a framework fo
 
 Found: multi-agent raised candidate completion **40% → 94%** on multi-objective design tasks (DeepSeek-V4-Flash). The outcome checks also caught a multi-agent run that returned the planner's internal instruction as the final answer
 
+Shipped: **security task environments from real CVEs** — reviving patched CVEs on official Docker images with minimal reverse patches, driving an LLM creator with injection recipes, and gating every task with program-run proofs: untouched target fails, reference solution solves, wrong submissions fail, re-grading agrees
+
 [My Resume (English)](https://github.com/ming1219/ming1219/blob/main/RESUME.md) | [我的简历（中文）](https://github.com/ming1219/ming1219/blob/main/RESUME.zh-CN.md)
 
 ### 🛠 Projects
@@ -18,6 +20,7 @@ Found: multi-agent raised candidate completion **40% → 94%** on multi-objectiv
 | ------- | ---------- |
 | [**EMBench**](https://github.com/ming1219/EMBench) `MIT` | Evaluation framework for tool-using agents: task-as-directory spec, reusable declarative checks, self-validating verifiers, evidence-strict grading, results bound to the agent that produced them, task-level pass@k / pass^k, offline re-grading |
 | **EM-Agent** `private` | Molecular-design agent: LangGraph single- and multi-agent workflows, MCP tool server (29 tools), FastAPI + SSE backend, React + TypeScript frontend, trajectory-level evaluation, deployed on Linux with nginx and systemd |
+| **Security Task Factory** `private` | CVE-based task pipeline for LLM eval & RL: diff vulnerable vs fixed source and strip the patch's defenses with a minimal patch on the official image; recipe-driven LLM creator emits env build scripts, task statements and private reference solutions; four automated gates (untouched target fails, reference solves, wrong submissions fail, stable re-grading) plus three-layer leak scanning; difficulty calibrated by 3×2h model attempts with trajectory reading; grading trusts only observable outcomes (flag byte-compare, recipe-defined partial scores), usable as eval success criteria and RL reward; resolved 10+ classes of container env failures into build rules |
 
 ### 🧰 Stack
 
