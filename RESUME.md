@@ -1,10 +1,11 @@
 **English** | [简体中文](RESUME.zh-CN.md) · [← Profile](https://github.com/ming1219)
 
 # Wen Jian
+Email：1282295467@qq.com
 
 M.S. student at Southwest University of Science and Technology, graduating in 2027. From 2024 to 2026 I was a joint-training student at a research institute.
 
-My work follows one line: **build an agent, let it carry out real tasks, then check with programs whether it really finished them.** I have built LLM agents that use domain tools, designed and implemented an evaluation framework for agents, and built an LLM evaluation set from real CVEs.
+My research is on **evaluating LLM agents and building training data for LLMs**. I have designed and implemented an evaluation framework for agents, built an LLM evaluation set from real CVEs, and built chain-of-thought training data for LLMs.
 
 I also work on molecular AI, publishing as first author in *Information Sciences* and at CSCWD 2026.
 
@@ -30,7 +31,7 @@ I also work on molecular AI, publishing as first author in *Information Sciences
 Turns real, already-patched vulnerabilities into standardized tasks whose completion a program can judge. Every task has a reproducible environment, a single solution and calibrated difficulty, so it can be used to evaluate LLMs and also as an environment and reward source for reinforcement learning.
 
 - **Building tasks**　Each CVE is revived on the official Docker image with a minimal reverse patch, using one of three injection methods chosen by how the software is shipped, namely removing the fix, activating a configuration or using a native defect. Hand-written injection recipes state the vulnerability mechanism, the build approach and the single solution. A sandboxed LLM then generates the complete task package in one pass, including environment orchestration scripts, a two-layer task statement and a private reference solution, and also exports it in a general evaluation format compatible with terminal-bench
-- **Proving tasks work**　The framework verifies every LLM-generated task by building the real image and running the reference solution to success. An independent model then reviews each task for solvability, cheating resistance, shortcut resistance and other criteria
+- **Proving tasks work**　The framework verifies every LLM-generated task by building the real image and running the reference solution to success. An independent model then reviews each task on four criteria, namely solvability, cheating resistance, shortcut resistance and whether it can be solved without blind guessing
 - **Calibrating difficulty**　The models under test solve the tasks in the same environments, and difficulty is set by pass rate. Trajectory analysis confirms that failures are genuine and rules out failures caused by the environment
 
 ### EMBench: evaluation framework for tool-using agents · Author · [GitHub](https://github.com/ming1219/EMBench)
