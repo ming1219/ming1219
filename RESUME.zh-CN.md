@@ -1,6 +1,7 @@
 [English](RESUME.md) | **简体中文** · [← 主页](https://github.com/ming1219)
 
 # 文健 · Wen Jian
+邮箱：1282295467@qq.com
 
 西南科技大学硕士研究生，2027 年毕业；2024 – 2026 年在研究院联合培养。
 
