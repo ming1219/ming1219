@@ -12,7 +12,7 @@ I build LLM agents, put them to work on executable tasks, and check with program
 
 ### 🛠 Projects
 
-- **Security Task Factory**: turns real CVEs into evaluation and RL tasks. Automated gates prove every task before use: the untouched target fails, the reference solves it, wrong submissions fail
+- **Security Task Factory** · an LLM evaluation set built from real CVEs. Every task has a reproducible environment, a single solution and calibrated difficulty, for evaluating LLMs and as an environment and reward source for reinforcement learning
 - [**EMBench**](https://github.com/ming1219/EMBench) `MIT`: open-source framework that grades agents with executable checks and keeps the evidence for re-checking. Its final-answer check caught a multi-agent run that never gave the user a conclusion
 - [**EM-Agent**](https://github.com/ming1219/EM-Agent): molecular-design agent with single- and multi-agent LangGraph workflows over 26+ MCP tools; FastAPI + React, deployed on Linux
 - [**QA Studio**](https://qa.dkelab.cn): training-data platform for LLMs. A six-stage pipeline builds chain-of-thought QA data; 100k+ pairs produced
