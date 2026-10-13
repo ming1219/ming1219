@@ -1,10 +1,11 @@
 **English** | [简体中文](RESUME.zh-CN.md) · [← Profile](https://github.com/ming1219)
 
 # Wen Jian
+Email：1282295467@qq.com
 
 M.S. student at Southwest University of Science and Technology, graduating in 2027. From 2024 to 2026 I was a joint-training student at a research institute.
 
-My work follows one line: **build an agent, let it carry out real tasks, then check with programs whether it really finished them.** I build LLM agents that use domain tools, turn tasks into executable environments, and write the graders that verify the results.
+I have constructed an Agent evaluation framework and evaluation set, as well as created training data for the large-scale model COT.
 
 I also work on molecular AI, publishing as first author in *Information Sciences* and at CSCWD 2026.
 
